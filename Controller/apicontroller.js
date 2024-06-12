@@ -192,7 +192,7 @@ async function connectToMongo() {
             return res.status(404).send('Document not found');
           }
           res.send(result)
-          res.status(200).send('Document updated successfully');
+          // res.status(200).send('Document updated successfully');
         } catch (error) {
           console.error(error.message);
           res.status(500).send('An error occurred');
