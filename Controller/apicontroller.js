@@ -181,6 +181,7 @@ async function connectToMongo() {
        
       
           const { updateFields } = req.body;
+          updateFields.processed_date = new Date();
           if (!updateFields || Object.keys(updateFields).length === 0) {
             return res.status(400).send('No fields to update');
           }
